@@ -1,6 +1,7 @@
 /* DRAG and Drop */
 function dragAndDropImage(input) {
   if (input === "reset") {
+    // если нажили кнопку удалить, то очищаем поле input
     let inputImage = document.querySelector("#imagefile");
     inputImage.value = "";
   } else {
@@ -11,6 +12,7 @@ function dragAndDropImage(input) {
         var image = new Image();
         image.onload = function () {
           if (this.width >= 1080 || this.height >= 1080) {
+            // проверяем ширину и высоту изображения, если больше, то выводим ошибку
             $(".errorUploadImage").html("Слишком большое изображение");
             removeUploadImg("true");
           } else {
