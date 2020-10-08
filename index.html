@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Drag and drop to input image JS | Перетащите изображение, чтобы увидеть
+      превью JavaScript
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="https://kritskii-a.github.io/" class="navbar-brand"
+            >Drag and drop to input image JS | Перетащите изображение, чтобы
+            увидеть превью JavaScript</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="panel panel-success">
+        <div class="panel-heading">Пример окна drag'n'drop</div>
+        <div class="panel-heading">Ваша фотография</div>
+        <div class="panel-body">
+            <form action="#" method="post">
+                <div class="imageUpload">
+                    <div class="imageUpload--wrap">
+
+                        <input type="file" name="imgUpload" class="fileUpload--input" onchange="dragAndDropImage(this);" id="imagefile">
+                        
+                        <div class="dragText">
+                        <h3>Перетащите сюда вашу фотографию</h3>
+                        <p>(соотношение сторон 1:1,<br/>размер до 1080х1080 px)</p>
+                        </div>
+                    </div>
+                     
+                    <div class="fileUpload--content">
+                    </div>
+                    <p class="errorUploadImage"></p>
+                    <button class="fileUpload--btn" type="button" onclick="$('.fileUpload--input').trigger( 'click' )">Загрузить фото</button>
+                    <button type="button" onclick="removeUploadImg()" class="removeImage">Удалить фото</button>
+                </div>
+
+              </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
