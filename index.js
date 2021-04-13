@@ -2,7 +2,7 @@
 function dragAndDropImage(input) {
   if (input === "reset") {
     // если нажили кнопку удалить, то очищаем поле input
-    let inputImage = document.querySelector("#imagefile");
+    let inputImage = document.querySelector("#image-file");
     inputImage.value = "";
   } else {
     if (input.files && input.files[0]) {
@@ -13,17 +13,17 @@ function dragAndDropImage(input) {
         image.onload = function () {
           if (this.width >= 1080 || this.height >= 1080) {
             // проверяем ширину и высоту изображения, если больше, то выводим ошибку
-            $(".errorUploadImage").html("Слишком большое изображение");
+            $(".block-image__error").html("Слишком большое изображение");
             removeUploadImg("true");
           } else {
-            $(".imageUpload--wrap").hide();
+            $(".block-image-wrap").hide();
 
-            $(".fileUpload--content").attr(
+            $(".block-image__img").attr(
               "style",
               "background-image: url(" + e.target.result + ")"
             );
-            $(".fileUpload--content").show();
-            $(".errorUploadImage").html("");
+            $(".block-image__img").show();
+            $(".block-image__error").html("");
           }
         };
         image.src = e.target.result;
@@ -37,11 +37,11 @@ function dragAndDropImage(input) {
 }
 
 function removeUploadImg(info) {
-  $(".fileUpload--input").replaceWith($(".fileUpload--input").clone());
-  $(".fileUpload--content").hide();
-  $(".imageUpload--wrap").show();
+  $(".block-image__input").replaceWith($(".block-image__input").clone());
+  $(".block-image__img").hide();
+  $(".block-image-wrap").show();
   if (!info) {
-    $(".errorUploadImage").html("");
+    $(".block-image__error").html("");
   }
 
   dragAndDropImage("reset");

@@ -32,22 +32,22 @@
         <div class="panel-heading">Ваша фотография</div>
         <div class="panel-body">
             <form action="#" method="post">
-                <div class="imageUpload">
-                    <div class="imageUpload--wrap">
+                <div class="block-image">
+                    <div class="block-image-wrap">
 
-                        <input type="file" name="imgUpload" class="fileUpload--input" onchange="dragAndDropImage(this);" id="imagefile">
+                        <input type="file" name="imgUpload" class="block-image__input" onchange="dragAndDropImage(this);" id="image-file">
                         
-                        <div class="dragText">
+                        <div class="block-image__text">
                         <h3>Перетащите сюда вашу фотографию</h3>
                         <p>(соотношение сторон 1:1,<br/>размер до 1080х1080 px)</p>
                         </div>
                     </div>
                      
-                    <div class="fileUpload--content">
+                    <div class="block-image__img">
                     </div>
-                    <p class="errorUploadImage"></p>
-                    <button class="fileUpload--btn" type="button" onclick="$('.fileUpload--input').trigger( 'click' )">Загрузить фото</button>
-                    <button type="button" onclick="removeUploadImg()" class="removeImage">Удалить фото</button>
+                    <p class="block-image__error"></p>
+                    <button class="block-image__btn" type="button" onclick="$('.block-image__input').trigger( 'click' )">Загрузить фото</button>
+                    <button type="button" onclick="removeUploadImg()" class="block-image__btn remove">Удалить фото</button>
                 </div>
                 <button type="submit" class="btn btn-default">Отправить</button>
               </form>

@@ -1,8 +1,8 @@
-.imageUpload {
+.block-image {
   padding-bottom: 40px;
 }
 
-.fileUpload--btn {
+.block-image__btn {
   margin: 0;
   color: #fff;
   background: #d0d0d0;
@@ -16,7 +16,7 @@
   font-size: 18px;
 }
 
-.fileUpload--btn:hover {
+.block-image__btn:hover {
   background: #ff9707;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -27,7 +27,7 @@
   transition: all 0.2s ease;
 }
 
-.fileUpload--content {
+.block-image__img {
   display: none;
   text-align: center;
   width: 280px;
@@ -39,7 +39,7 @@
   margin-bottom: 50px;
 }
 
-.fileUpload--input {
+.block-image__input {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 
-.imageUpload--wrap {
+.block-image-wrap {
   border: 2px solid #c4c4c4;
   width: 280px;
   height: 280px;
@@ -59,24 +59,24 @@
   margin-bottom: 50px;
 }
 
-.dragText {
+.block-image__text {
   text-align: center;
   padding-top: 60px;
 }
 
-.dragText h3 {
+.block-image__text h3 {
   color: #c4c4c4;
   padding: 0 50px;
   font-size: 16px;
 }
 
-.dragText p {
+.block-image__text p {
   color: #c4c4c4;
   padding: 0 50px;
   font-size: 12px;
 }
 
-.removeImage {
+.remove {
   margin: 0;
   color: #d0d0d0;
   background: #fff;
@@ -89,13 +89,13 @@
   font-size: 18px;
 }
 
-.removeImage:hover {
+.remove:hover {
   background: #e7e7e7;
   color: #ffffff;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
-.errorUploadImage {
+.block-image__error {
   color: red;
 }
